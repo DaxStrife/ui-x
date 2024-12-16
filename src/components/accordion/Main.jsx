@@ -1,13 +1,21 @@
 import { useState, useRef } from "react";
 
-import cn from "../../utils/cn";
+import cn from "@/utils/cn";
 
-const Main = ({ className, title = "", children, ...props }) => {
+const Main = ({ className, title = "", onClick, children, ...props }) => {
   const [open, setOpen] = useState(false);
   const contentRef = useRef(null);
 
+  const handleClick = (event) => {
+    setOpen(!open);
+
+    if (onClick) {
+      onClick(event);
+    }
+  };
+
   return (
-    <div {...props} onClick={() => setOpen(!open)} className={cn(`w-full cursor-pointer ${className}`)}>
+    <div {...props} onClick={handleClick} className={cn(`w-full cursor-pointer ${className}`)}>
       <div>{title}</div>
       <div
         onClick={() => setOpen(!open)}
