@@ -1,4 +1,4 @@
-import cn from "../../utils/cn";
+import cn from "@/utils/cn";
 
 const Main = ({ children, content, className = "", dir = "top", ...props }) => {
   const positions = {

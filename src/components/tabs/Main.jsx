@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import cn from "../../utils/cn";
+import cn from "@/utils/cn";
 
 const Main = ({ option, setOption, items = [], className = "", styleBar = "", ...props }) => {
   const barRef = useRef(null);
