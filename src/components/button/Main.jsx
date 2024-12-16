@@ -1,11 +1,25 @@
-import cn from "../../utils/cn";
+import cn from "@/utils/cn";
+import useRipple from "@/hooks/useRipple";
 
-const Main = ({ children, className = "", ...props }) => {
+const Main = ({ children, className = "", onClick = () => {}, ...props }) => {
+  const { createRipple, buttonRef } = useRipple();
+
+  const handleClick = (event) => {
+    createRipple(event);
+
+    if (onClick) {
+      onClick(event);
+    }
+  };
+
   return (
     <button
       {...props}
+      ref={buttonRef}
+      onClick={handleClick}
       className={cn(
-        `py-2 px-4 rounded-lg cursor-pointer text-sm text-slate-800 bg-slate-100 border border-slate-200 ring-slate-200 transition-all focus:ring-[3px] focus:ring-offset-0 focus:ring-slate-200 hover:bg-slate-200 hover:duration-300 hover:ease-in-out focus:bg-slate-100 disabled:cursor-default disabled:hover:bg-slate-100 select-none ${className}`
+        `py-2.5 px-4 rounded-lg cursor-pointer text-sm text-slate-800 bg-slate-100 border border-slate-200 relative overflow-hidden disabled:cursor-default disabled:hover:bg-slate-100 select-none`,
+        className
       )}
     >
       {children}
