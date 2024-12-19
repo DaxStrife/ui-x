@@ -72,7 +72,7 @@ const Header = (props) => {
               onChange={(e) => {
                 handleChangeYear(Number(e.target.value)), setOpen(false);
               }}
-              className="px-2 py-3 left-1/2 -translate-x-1/2 absolute rounded"
+              className="p-1 left-1/2 -translate-x-1/2 absolute rounded [&::-webkit-scrollbar]:w-[6px] [&::-webkit-scrollbar-thumb]:bg-slate-600/50 [&::-webkit-scrollbar-thumb]:rounded-md"
               value={currentYear}
               aria-label="Select Year"
               size="7"
@@ -99,18 +99,6 @@ const Header = (props) => {
       <button type="button" onClick={handleNextMonth}>
         <Ic_arrow_right />
       </button>
-
-      <style>
-        {`
-          #select-year::-webkit-scrollbar {
-            width: 10px;
-          }
-          #select-year::-webkit-scrollbar-thumb {
-            background-color: #475569;
-            border-radius: 3px;
-          }
-        `}
-      </style>
     </div>
   );
 };
