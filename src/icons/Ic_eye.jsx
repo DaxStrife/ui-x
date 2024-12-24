@@ -9,6 +9,7 @@ export const Ic_eye = ({ ...props }) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       className="icon icon-tabler icons-tabler-outline icon-tabler-eye"
+      viewBox="0 0 24 24"
       {...props}
     >
       <path stroke="none" d="M0 0h24v24H0z" />
@@ -29,6 +30,7 @@ export const Ic_eye_off = ({ ...props }) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       className="icon icon-tabler icons-tabler-outline icon-tabler-eye-off"
+      viewBox="0 0 24 24"
       {...props}
     >
       <path stroke="none" d="M0 0h24v24H0z" />

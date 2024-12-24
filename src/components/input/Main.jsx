@@ -22,13 +22,13 @@ const Main = ({ type = "text", placeholder = "", className = "", ...props }) => 
           {!openEye && (
             <Ic_eye_off
               onClick={() => setOpenEye(true)}
-              className="cursor-pointer absolute right-3 top-1/2 -translate-y-1/2"
+              className="cursor-pointer absolute right-3 top-1/2 -translate-y-1/2 size-5"
             />
           )}
           {openEye && (
             <Ic_eye
               onClick={() => setOpenEye(false)}
-              className="cursor-pointer absolute right-3 top-1/2 -translate-y-1/2"
+              className="cursor-pointer absolute right-3 top-1/2 -translate-y-1/2 size-5"
             />
           )}
         </Fragment>
