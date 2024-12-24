@@ -8,14 +8,14 @@ export const Options = ({ className, type = "button", children, ...props }) => {
     <button
       {...props}
       type={type}
-      className={`py-1 px-2 text-left w-full cursor-pointer rounded-md hover:bg-slate-300 focus:bg-blue-500 focus:text-white ${className}`}
+      className={`py-1 px-2 select-none text-left w-full cursor-pointer rounded-md hover:bg-slate-300 focus:bg-blue-500 focus:text-white ${className}`}
     >
       {children}
     </button>
   );
 };
 
-const Main = ({ className = "", value = "", children }) => {
+const Main = ({ className = "", value = "", placeholder = "", children }) => {
   const [open, setOpen] = useState(false);
   const buttonRef = useRef(null);
 
@@ -37,10 +37,10 @@ const Main = ({ className = "", value = "", children }) => {
         onClick={() => setOpen(true)}
         type="button"
         className={cn(
-          `py-2 px-4 h-10 w-56 rounded-lg ring-slate-200 transition-all focus:ring-[3px] relative bg-slate-100 text-left text-slate-500 ${className}`
+          `py-2 px-4 select-none h-10 w-56 rounded-lg ring-slate-200 transition-all focus:ring-[3px] relative bg-slate-100 text-left text-slate-500 ${className}`
         )}
       >
-        {value}
+        {value ? value : placeholder}
         <div className="absolute right-2 top-1/2 -translate-y-1/2">
           <Ic_select className="size-4" />
         </div>
