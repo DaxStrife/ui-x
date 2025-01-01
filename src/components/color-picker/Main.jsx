@@ -10,7 +10,7 @@ const Main = ({ value = "#1d4ed8", setValue, className }) => {
       <button
         type="button"
         onClick={() => inputRef.current?.click()}
-        className={cn(`w-10 h-10 rounded-xl cursor-pointer ring-slate-200 focus:ring-[3px] ${className}`)}
+        className={cn(`w-10 h-10 rounded-xl cursor-pointer ring-blue-200 focus:ring-[3px] ${className}`)}
         style={{ background: value }}
       />
       <input

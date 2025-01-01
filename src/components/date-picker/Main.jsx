@@ -348,7 +348,7 @@ const Main = ({ options, value, setValue, className = "", cardClassName = "", ..
           value={(value && new Date(value).toLocaleDateString(settings.location, settings.inputDateFormat)) || ""}
           readOnly
           className={cn(
-            `h-10 capitalize px-3.5 rounded-lg ring-slate-200 transition-all focus:ring-[3px] bg-slate-100 ${className}`
+            `h-10 capitalize px-3.5 rounded-lg ring-blue-200 transition-all focus:ring-[3px] bg-slate-100 ${className}`
           )}
         />
 

@@ -37,7 +37,7 @@ const Main = ({ className = "", value = "", placeholder = "", children }) => {
         onClick={() => setOpen(true)}
         type="button"
         className={cn(
-          `py-2 px-4 select-none h-10 w-56 rounded-lg ring-slate-200 transition-all focus:ring-[3px] relative bg-slate-100 text-left text-slate-500 ${className}`
+          `py-2 px-4 select-none h-10 w-56 rounded-lg ring-blue-200 transition-all focus:ring-[3px] relative bg-slate-100 text-left text-slate-500 ${className}`
         )}
       >
         {value ? value : placeholder}

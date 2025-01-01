@@ -14,7 +14,7 @@ const Main = ({ type = "text", placeholder = "", className = "", ...props }) => 
         type={type === "password" ? (openEye ? "text" : "password") : type}
         placeholder={placeholder}
         className={cn(
-          `h-10 px-4 rounded-lg ring-slate-200 transition-all placeholder:text-slate-500 focus:ring-[3px] bg-slate-100 ${className}`
+          `h-10 px-4 rounded-lg ring-blue-200 transition-all placeholder:text-slate-500 focus:ring-[3px] bg-slate-100 ${className}`
         )}
       />
       {type === "password" && (

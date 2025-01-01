@@ -11,7 +11,7 @@ const Main = ({ className = "" }) => {
       <input
         type="checkbox"
         className={cn(
-          `appearance-none w-5 h-5 cursor-pointer rounded-md border-2 transition-all focus:ring-2 focus:ring-slate-200 relative ${className}`
+          `appearance-none w-5 h-5 cursor-pointer rounded-md border-2 transition-all focus:ring-2 focus:ring-blue-200 relative ${className}`
         )}
         style={{
           "--icon-url": `url('${icon}')`,
