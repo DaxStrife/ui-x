@@ -2,7 +2,7 @@ import cn from "@/utils/cn";
 
 import { Ic_select } from "@/icons/Ic_arrow";
 
-export const Select = ({ value, setValue, className = "", children, ...props }) => {
+export const Select = ({ className = "", children, ...props }) => {
   return (
     <div className="relative max-w-min">
       <div className="absolute right-2 top-1/2 -translate-y-1/2">
@@ -10,8 +10,6 @@ export const Select = ({ value, setValue, className = "", children, ...props }) 
       </div>
       <select
         {...props}
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
         className={cn(
           `h-10 px-4 w-56 cursor-pointer rounded-lg ring-blue-200 transition-all placeholder:text-slate-500 focus:ring-[3px] bg-slate-100 appearance-none ${className}`
         )}
