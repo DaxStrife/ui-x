@@ -15,7 +15,7 @@ export const Options = ({ className, type = "button", children, ...props }) => {
   );
 };
 
-const Main = ({ className = "", value = "", placeholder = "", children }) => {
+export const AdvancedSelect = ({ className = "", value = "", placeholder = "", children }) => {
   const [open, setOpen] = useState(false);
   const buttonRef = useRef(null);
 
@@ -60,5 +60,3 @@ const Main = ({ className = "", value = "", placeholder = "", children }) => {
     </div>
   );
 };
-
-export default Main;

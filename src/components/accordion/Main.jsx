@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 
 import cn from "@/utils/cn";
 
-const Main = ({ className, title = "", onClick, children, ...props }) => {
+export const Accordion = ({ className, title = "", onClick, children, ...props }) => {
   const [open, setOpen] = useState(false);
   const contentRef = useRef(null);
 
@@ -28,5 +28,3 @@ const Main = ({ className, title = "", onClick, children, ...props }) => {
     </div>
   );
 };
-
-export default Main;

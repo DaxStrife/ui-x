@@ -1,6 +1,6 @@
 import cn from "@/utils/cn";
 
-const Main = ({ className }) => {
+export const Spinner = ({ className }) => {
   return (
     <div
       className={cn(
@@ -13,5 +13,3 @@ const Main = ({ className }) => {
     </div>
   );
 };
-
-export default Main;

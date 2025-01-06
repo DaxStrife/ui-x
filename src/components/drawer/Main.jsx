@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 
 import cn from "@/utils/cn";
 
-const Main = ({ open = false, setOpen = () => {}, dir = "right", children, className = "", ...props }) => {
+export const Drawer = ({ open = false, setOpen = () => {}, dir = "right", children, className = "", ...props }) => {
   const elementRef = useRef(null);
 
   const directions = {
@@ -47,5 +47,3 @@ const Main = ({ open = false, setOpen = () => {}, dir = "right", children, class
     </div>
   );
 };
-
-export default Main;

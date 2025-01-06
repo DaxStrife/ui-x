@@ -1,6 +1,6 @@
 import cn from "@/utils/cn";
 
-const Main = ({ placeholder = "", className = "", ...props }) => {
+export const TextArea = ({ placeholder = "", className = "", ...props }) => {
   return (
     <textarea
       {...props}
@@ -12,5 +12,3 @@ const Main = ({ placeholder = "", className = "", ...props }) => {
     />
   );
 };
-
-export default Main;

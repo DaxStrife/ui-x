@@ -1,4 +1,4 @@
-const Main = ({ open = false, setOpen = () => {}, children }) => {
+export const Modal = ({ open = false, setOpen = () => {}, children }) => {
   if (!open) return null;
   return (
     <div className="fixed inset-0 flex items-center justify-center z-[9999]">
@@ -9,5 +9,3 @@ const Main = ({ open = false, setOpen = () => {}, children }) => {
     </div>
   );
 };
-
-export default Main;

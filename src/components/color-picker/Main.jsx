@@ -2,7 +2,7 @@ import { useRef } from "react";
 
 import cn from "@/utils/cn";
 
-const Main = ({ value = "#1d4ed8", setValue, className }) => {
+export const ColorPicker = ({ value = "#1d4ed8", setValue, className }) => {
   const inputRef = useRef(null);
 
   return (
@@ -23,5 +23,3 @@ const Main = ({ value = "#1d4ed8", setValue, className }) => {
     </div>
   );
 };
-
-export default Main;

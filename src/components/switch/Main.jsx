@@ -1,6 +1,6 @@
 import cn from "@/utils/cn";
 
-const Main = ({ value, setValue, className = "", ...props }) => {
+export const Switch = ({ value, setValue, className = "", ...props }) => {
   return (
     <div className="inline-flex cursor-pointer">
       <input {...props} type="checkbox" value="" className="sr-only peer" onChange={() => {}} checked={value} />
@@ -13,5 +13,3 @@ const Main = ({ value, setValue, className = "", ...props }) => {
     </div>
   );
 };
-
-export default Main;

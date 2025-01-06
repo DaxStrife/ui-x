@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 import cn from "@/utils/cn";
 
-const Main = ({ option, setOption, items = [], className = "", styleBar = "", ...props }) => {
+export const Tabs = ({ option, setOption, items = [], className = "", styleBar = "", ...props }) => {
   const barRef = useRef(null);
   const buttonRefs = useRef([]);
 
@@ -37,5 +37,3 @@ const Main = ({ option, setOption, items = [], className = "", styleBar = "", ..
     </div>
   );
 };
-
-export default Main;

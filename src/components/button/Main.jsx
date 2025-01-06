@@ -1,7 +1,7 @@
 import cn from "@/utils/cn";
 import useRipple from "@/hooks/useRipple";
 
-const Main = ({ children, className = "", onClick = () => {}, ...props }) => {
+export const Button = ({ children, className = "", onClick = () => {}, ...props }) => {
   const { createRipple, buttonRef } = useRipple();
 
   const handleClick = (event) => {
@@ -26,5 +26,3 @@ const Main = ({ children, className = "", onClick = () => {}, ...props }) => {
     </button>
   );
 };
-
-export default Main;

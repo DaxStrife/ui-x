@@ -2,7 +2,7 @@ import cn from "@/utils/cn";
 
 import { Ic_select } from "@/icons/Ic_arrow";
 
-const Main = ({ value, setValue, className = "", children, ...props }) => {
+export const Select = ({ value, setValue, className = "", children, ...props }) => {
   return (
     <div className="relative max-w-min">
       <div className="absolute right-2 top-1/2 -translate-y-1/2">
@@ -21,5 +21,3 @@ const Main = ({ value, setValue, className = "", children, ...props }) => {
     </div>
   );
 };
-
-export default Main;

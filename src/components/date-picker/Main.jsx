@@ -169,7 +169,7 @@ const Card = (props) => {
   );
 };
 
-const Main = ({ options, value, setValue, className = "", cardClassName = "", ...props }) => {
+export const Datepicker = ({ options, value, setValue, className = "", cardClassName = "", ...props }) => {
   const defaults = {
     minYear: 1950,
     maxYear: 2050,
@@ -376,5 +376,3 @@ const Main = ({ options, value, setValue, className = "", cardClassName = "", ..
     </div>
   );
 };
-
-export default Main;

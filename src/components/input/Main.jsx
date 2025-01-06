@@ -4,7 +4,7 @@ import cn from "@/utils/cn";
 
 import { Ic_eye, Ic_eye_off } from "@/icons/Ic_eye";
 
-const Main = ({ type = "text", placeholder = "", className = "", ...props }) => {
+export const Input = ({ type = "text", placeholder = "", className = "", ...props }) => {
   const [openEye, setOpenEye] = useState(false);
 
   return (
@@ -36,5 +36,3 @@ const Main = ({ type = "text", placeholder = "", className = "", ...props }) => 
     </div>
   );
 };
-
-export default Main;

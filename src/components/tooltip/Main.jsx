@@ -1,6 +1,6 @@
 import cn from "@/utils/cn";
 
-const Main = ({ children, content, className = "", dir = "top", ...props }) => {
+export const Tooltip = ({ children, content, className = "", dir = "top", ...props }) => {
   const positions = {
     top: "left-1/2 -translate-x-1/2 bottom-full mb-2",
     right: "left-full top-1/2 -translate-y-1/2 ml-2",
@@ -24,5 +24,3 @@ const Main = ({ children, content, className = "", dir = "top", ...props }) => {
     </div>
   );
 };
-
-export default Main;
