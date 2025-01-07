@@ -2,7 +2,7 @@ import { useRef } from "react";
 
 import cn from "@/utils/cn";
 
-export const ColorPicker = ({ value = "#1d4ed8", setValue, className }) => {
+export const ColorPicker = ({ value = "#1d4ed8", className, ...props }) => {
   const inputRef = useRef(null);
 
   return (
@@ -14,9 +14,9 @@ export const ColorPicker = ({ value = "#1d4ed8", setValue, className }) => {
         style={{ background: value }}
       />
       <input
+        {...props}
         ref={inputRef}
         value={value}
-        onChange={(e) => setValue(e.target.value)}
         type="color"
         className="opacity-0 absolute h-full w-full left-0 top-0 -z-10"
       />

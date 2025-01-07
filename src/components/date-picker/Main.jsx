@@ -169,7 +169,7 @@ const Card = (props) => {
   );
 };
 
-export const Datepicker = ({ options, value, setValue, className = "", cardClassName = "", ...props }) => {
+export const Datepicker = ({ options, date, setDate, className = "", cardClassName = "", ...props }) => {
   const defaults = {
     minYear: 1950,
     maxYear: 2050,
@@ -217,7 +217,7 @@ export const Datepicker = ({ options, value, setValue, className = "", cardClass
       dayDiv.className =
         "col-span-1 flex-1 font-semibold text-sm text-center hover:bg-slate-500 rounded-lg leading-6 h-8 content-center select-none cursor-pointer";
 
-      const selectedDate = new Date(value);
+      const selectedDate = new Date(date);
       const selectedDay = selectedDate.getDate();
       const selectedYear = selectedDate.getFullYear();
       const selectedMonth = selectedDate.getMonth();
@@ -246,7 +246,7 @@ export const Datepicker = ({ options, value, setValue, className = "", cardClass
           selectedDate = `${month + 1}/${i}/${year}/${hour.value}`;
         }
 
-        setValue(selectedDate);
+        setDate(selectedDate);
 
         // Add classes to the selected day
         dayDiv.classList.add("bg-blue-600", "text-white");
@@ -280,14 +280,14 @@ export const Datepicker = ({ options, value, setValue, className = "", cardClass
 
   const handleChangeHour = (newHour) => {
     setSelectedHour(newHour);
-    const newDay = new Date(value);
+    const newDay = new Date(date);
 
     const year = newDay.getFullYear();
     const month = newDay.getMonth();
     const day = newDay.getDate();
 
     const selectedDateValue = `${month + 1}/${day}/${year}/${newHour}`;
-    setValue(selectedDateValue);
+    setDate(selectedDateValue);
   };
 
   const handleToggleCalendar = () => {
@@ -309,8 +309,8 @@ export const Datepicker = ({ options, value, setValue, className = "", cardClass
   }, [currentDate, isCalendarOpen]);
 
   useEffect(() => {
-    if (value && isCalendarOpen) {
-      const newDay = new Date(value);
+    if (date && isCalendarOpen) {
+      const newDay = new Date(date);
       setCurrentDate(newDay);
 
       let hour = newDay.getHours();
@@ -345,7 +345,7 @@ export const Datepicker = ({ options, value, setValue, className = "", cardClass
         <input
           {...props}
           type="text"
-          value={(value && new Date(value).toLocaleDateString(settings.location, settings.inputDateFormat)) || ""}
+          value={(date && new Date(date).toLocaleDateString(settings.location, settings.inputDateFormat)) || ""}
           readOnly
           className={cn(
             `h-10 capitalize px-3.5 rounded-lg ring-blue-200 transition-all focus:ring-[3px] bg-slate-100 ${className}`
