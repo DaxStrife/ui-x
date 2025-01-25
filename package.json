@@ -1,8 +1,29 @@
 {
   "name": "ui-x",
-  "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "A modern and customizable UI component library for React, built with Tailwind CSS. Designed to help developers quickly create visually appealing and responsive user interfaces.",
+  "keywords": [
+    "react",
+    "ui",
+    "component",
+    "library",
+    "tailwind",
+    "css"
+  ],
+  "author": "Hector Rendon",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/ui-x.umd.cjs",
+  "module": "./dist/ui-x.js",
+  "exports": {
+    ".": {
+      "import": "./dist/ui-x.js",
+      "require": "./dist/ui-x.umd.cjs"
+    },
+    "./dist/ui-x.css": "./dist/ui-x.css"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -11,16 +32,20 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
     "tailwind-merge": "^2.5.5"
   },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
   "devDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
     "globals": "^15.12.0",
     "postcss": "^8.4.49",
-    "tailwindcss": "^3.4.15",
+    "tailwindcss": "^3.4.16",
     "vite": "^6.0.1"
   }
 }
