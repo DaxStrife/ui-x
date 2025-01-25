@@ -24,6 +24,10 @@
     },
     "./dist/ui-x.css": "./dist/ui-x.css"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaxStrife/ui-x.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
