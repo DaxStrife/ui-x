@@ -1,7 +1,17 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 const useRipple = () => {
   const buttonRef = useRef(null);
+
+  useEffect(() => {
+    const button = buttonRef.current;
+
+    return () => {
+      if (button) {
+        button.removeEventListener("click", createRipple);
+      }
+    };
+  }, [buttonRef]);
 
   const createRipple = (event) => {
     const button = buttonRef.current;
@@ -21,13 +31,20 @@ const useRipple = () => {
     const rippleY = event.clientY - button.getBoundingClientRect().top - radius;
 
     const ripple = document.createElement("span");
-    ripple.style.width = ripple.style.height = `${diameter}px`;
-    ripple.style.left = `${rippleX}px`;
-    ripple.style.top = `${rippleY}px`;
 
-    ripple.style.backgroundColor = color;
-
-    ripple.className = "absolute rounded-full transform scale-0 animate-ripple";
+    Object.assign(ripple.style, {
+      position: "absolute",
+      borderRadius: "50%",
+      transform: "scale(0)",
+      width: `${diameter}px`,
+      height: `${diameter}px`,
+      left: `${rippleX}px`,
+      top: `${rippleY}px`,
+      backgroundColor: color,
+      opacity: 1,
+      animation: "ripple 0.3s linear",
+      pointerEvents: "none",
+    });
 
     button.appendChild(ripple);
 
